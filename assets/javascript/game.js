@@ -1,11 +1,19 @@
 //Functions Needed
 
+random_result = Math.floor(Math.random() * 102)+18;
+console.log(random_result)
+
+$("#result").html('Hola! Random Number = ' + random_result);
 for (var i = 0; i < 4; i++) {
 
-    var random = Math.floor(Math.random() * 12);
+    var random = Math.floor(Math.random() * 13);
     console.log(random)
+
     var crystal = $("<div>");
-    crystal.attr("class", 'crystal');
+    crystal.attr({
+        "class": 'crystal',
+        "random-box": random
+    });
 
     $(".fourCrystals").append(crystal);
     console.log("Hola again");
